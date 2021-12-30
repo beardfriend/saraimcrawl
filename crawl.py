@@ -54,7 +54,7 @@ def crawling(maxPage, cursor, db):
                 splitList = newsoup.find_all(attrs={"name": "description"})[0][
                     "content"
                 ].split(",")
-                print(splitList)
+
                 index = 0
                 indexing += 1
                 for idx, val in enumerate(splitList):
@@ -63,7 +63,7 @@ def crawling(maxPage, cursor, db):
                         res = cursor.execute(checksql, val)
                         name = val
                         cursor.fetchall()
-                        print(res)
+
                     if res == 1:
                         break
                     if val.find(":") == -1:
@@ -77,7 +77,7 @@ def crawling(maxPage, cursor, db):
                             )
                             cursor.fetchall()
                             db.commit()
-                            print(tt[1])
+                            print(f"수집했습니다. {name} {tt[1]}")
                         index += 1
 
     else:
