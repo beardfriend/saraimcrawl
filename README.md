@@ -1,3 +1,1 @@
-1. 사람인 크롤링
-2. 메일 보내기
-3. 보낸 메일 데이터베이스에 저장
+프로젝트 설명 : https://beardfriend.github.io/Project/crawling_saramin/
